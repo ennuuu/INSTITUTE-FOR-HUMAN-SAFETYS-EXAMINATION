@@ -1,0 +1,34 @@
+/* Permission question */
+.question {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Camera wrapper */
+#stage3-camera .camera-wrapper {
+  position: relative;
+  width: 640px;
+  height: 480px;
+  margin: auto;
+  background: black;
+}
+
+#stage3-camera video#webcam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#p5-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+  pointer-events: none;
+  z-index: 2;
+}

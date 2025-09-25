@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>INSTITUTE FOR HUMAN SAFETY’S EXAMINATION</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jxs7jcj.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/addons/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <div class="crt">
+      <!-- PAGE 1 -->
+      <div class="frame page" id="page-1">
+        <div class="content-wrapper">
+          <p class="welcome">WELCOME TO</p>
+          <h1>INSTITUTE FOR HUMAN<br />SAFETY'S EXAMINATION.</h1>
+          <p class="desc" id="page-1-text">
+            THIS SYSTEM HAS BEEN DEVELOPED FOR THE SAFETY OF GLOBAL CITIZENS ALL
+            AROUND THE WORLD.
+          </p>
+        </div>
+        <button class="start blink fixed-button" data-target="page-2">
+          [ PRESS HERE TO START ]
+        </button>
+      </div>
+
+      <!-- PAGE 2: Warning -->
+      <div class="frame page hidden" id="page-2">
+        <h2 class="warning-title">CONTENT WARNING</h2>
+        <p class="warning-text">
+          THIS EXPERIENCE CONTAINS:<br />
+          • FLASHING EFFECTS AND RAPID VISUAL DISTORTION<br />
+          • UNSETTLING IMAGERY AND UNCANNY VISUALS<br />
+          • DISTORTED AND HIGH-INTENSITY SOUND DESIGN<br /><br />
+
+          IT MAY TRIGGER DISCOMFORT OR ADVERSE REACTIONS FOR INDIVIDUALS
+          WITH:<br />
+          • PHOTOSENSITIVE EPILEPSY OR OTHER SEIZURE DISORDERS<br />
+          • SENSORY PROCESSING SENSITIVITIES<br />
+          • ANXIETY OR RELATED MENTAL HEALTH CONDITIONS<br /><br />
+
+          BY CONTINUING, YOU ACKNOWLEDGE THESE RISKS AND CHOOSE TO PROCEED AT
+          YOUR OWN DISCRETION.<br /><br />
+
+          IF YOU ARE UNSURE, PLEASE DO NOT CONTINUE.
+        </p>
+        <button class="start red" data-target="page-3">
+          [ I UNDERSTAND, CONTINUE ]
+        </button>
+      </div>
+
+      <!-- PAGE 3 -->
+      <div class="frame page hidden" id="page-3">
+        <p class="story" id="page-3-text">
+          GOVERNMENTS ALL AROUND THE WORLD HAVE BEEN SECRETLY STORING DNA.<br />
+          CLONING CITIZENS FOR INHUMANE EXPERIMENTS.<br /><br />
+
+          THE CLONES EVOLVED.<br />
+          THEY ARE NO LONGER HUMAN.<br />
+          SOME HAVE ESCAPED THE LABS.<br /><br />
+
+          BE CAREFUL. THEY RETAIN THE MEMORIES OF THE ORIGINALS.<br />
+          THEY MAY BE IN YOUR LOCAL AREA.
+        </p>
+        <!-- <button class="start" data-target="page-4">[ NEXT ]</button> -->
+      </div>
+
+      <!-- PAGE 4 -->
+      <div class="frame page hidden" id="page-4">
+        <div class="content-wrapper">
+          <p class="story" id="page-4-text">
+            LOCK ALL DOORS WHEN ALONE.<br />
+            DO NOT TRUST THE LAW ENFORCEMENT.<br />
+            VERIFY THE ABNORMALITY OF THE PERSON IN FRONT OF YOU.<br />
+            DO NOT TRUST ANYONE.
+          </p>
+        </div>
+        <a class="start fixed-button" href="stage1.html"
+          >[ CONTINUE TO STAGE 1 ]</a
+        >
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span id="date"></span>
+        <span id="time"></span>
+        <span id="location">Ho Chi Minh City</span>
+      </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

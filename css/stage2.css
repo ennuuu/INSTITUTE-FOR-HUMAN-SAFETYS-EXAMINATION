@@ -1,0 +1,91 @@
+#crt-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Archive grid */
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 24px;
+  padding: 20px;
+  justify-items: center;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.archive-item {
+  width: 70px; /* small fixed size */
+  height: 90px; /* keep 3:4 ratio */
+  border: none;
+  color: inherit;
+  overflow: hidden;
+  padding: 0;
+  background: black;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.archive-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) sepia(100%) hue-rotate(200deg) brightness(65%)
+    contrast(300%);
+  transition: filter 0.2s;
+}
+
+.archive-item:hover {
+  transform: scale(1.1);
+}
+
+.archive-item:hover img {
+  filter: grayscale(0%) contrast(1) brightness(1);
+}
+
+/* Dossier layout */
+.dossier {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.portrait {
+  width: 200px; /* or whatever size */
+  height: 250px;
+  border: 2px solid var(--neon-blue);
+  overflow: hidden; /* crop if the img is bigger */
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill the box without distortion */
+  display: block;
+}
+
+.info {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.info p {
+  margin: 6px 0;
+}
+
+.info .alert {
+  color: var(--neon-blue);
+  font-weight: bold;
+}

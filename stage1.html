@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Institute for Human Safety</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jxs7jcj.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/stage1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/addons/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <div class="crt">
+      <!-- PAGE 1: Stage intro -->
+      <div class="frame page" id="stage1-page-1">
+        <h2 class="stage-title">STAGE 1:<br />EXAMINATION</h2>
+        <button class="start" data-target="stage1-page-2">[ CONTINUE ]</button>
+      </div>
+
+      <!-- PAGE 2: Instructions -->
+      <div class="frame page hidden" id="stage1-page-2">
+        <h2 class="stage-title">DETECT HUMANS</h2>
+        <button class="start" data-target="stage1-page-3">[ CONTINUE ]</button>
+      </div>
+
+      <!-- PAGE 3: Choices -->
+      <div class="frame page hidden" id="stage1-page-3">
+        <div class="game-area">
+          <div class="choices">
+            <button class="choice" data-answer="wrong">
+              <img src="assets/stage 1/wrong-choice-1.jpg" alt="Wrong Choice" />
+            </button>
+            <button class="choice" data-answer="correct">
+              <img
+                src="assets/stage 1/correct-choice-1.jpg"
+                alt="Correct Choice"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 4: Choices Round 2 -->
+      <div class="frame page hidden" id="stage1-page-4">
+        <div class="game-area">
+          <div class="choices">
+            <button class="choice" data-answer="correct">
+              <img
+                src="assets/stage 1/correct-choice-2.jpg"
+                alt="Correct Choice"
+              />
+            </button>
+            <button class="choice" data-answer="wrong">
+              <img src="assets/stage 1/wrong-choice-2.jpg" alt="Wrong Choice" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 5: Choices Round 3 -->
+      <div class="frame page hidden" id="stage1-page-5">
+        <div class="game-area">
+          <div class="choices">
+            <button class="choice" data-answer="wrong">
+              <img src="assets/stage 1/wrong-choice-3.jpg" alt="Wrong Choice" />
+            </button>
+            <button class="choice" data-answer="correct">
+              <img
+                src="assets/stage 1/correct-choice-3.jpg"
+                alt="Correct Choice"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span id="date"></span>
+        <span id="time"></span>
+        <span id="location">Ho Chi Minh City</span>
+      </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/stage1.js"></script>
+  </body>
+</html>

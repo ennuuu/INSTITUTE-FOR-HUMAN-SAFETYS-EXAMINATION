@@ -1,0 +1,110 @@
+:root {
+  --neon-blue: #0f0fff;
+  --warning-red: #ff2b2b;
+  --border-thick: 3px;
+  --border-thin: 2px;
+  --font-main: "ocr-b-std", monospace;
+  --frame-padding: 60px 50px;
+  --crt-padding: 20px;
+  --footer-font-size: 0.9rem;
+  --base-font-size: 1rem;
+  --heading-font-size: 2.8rem;
+}
+
+body {
+  margin: 0;
+  background: black;
+  color: var(--neon-blue);
+  font-family: var(--font-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none; */
+}
+
+.crt {
+  border: var(--border-thick) solid var(--neon-blue);
+  box-shadow: 0 0 20px var(--neon-blue);
+  height: 100vh;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--crt-padding);
+}
+
+.frame {
+  width: 100%;
+  height: 100vh;
+  border: var(--border-thin) solid var(--neon-blue);
+  padding: var(--frame-padding);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: var(--border-thin) solid var(--neon-blue);
+  margin-top: 20px;
+  padding: 10px;
+  font-size: var(--footer-font-size);
+}
+
+.stage-title {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 80px;
+}
+
+.start {
+  font-size: var(--base-font-size);
+  font-family: var(--font-main);
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background: none;
+  border: none;
+  color: var(--neon-blue);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.start.blink {
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.start.red {
+  color: var(--warning-red);
+}
+
+.start:hover:not(.blink) {
+  transform: scale(1.05);
+  color: white;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Institute for Human Safety</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jxs7jcj.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/stage3.css" />
+  </head>
+  <body>
+    <div class="crt">
+      <!-- PAGE 1: Intro -->
+      <div class="frame page" id="stage3-intro">
+        <h2 class="stage-title">STAGE 3:<br />STORING YOUR DATA</h2>
+        <button class="start" data-target="stage3-permission">
+          [ CONTINUE ]
+        </button>
+      </div>
+
+      <!-- PAGE 2: Permission Request -->
+      <div class="frame page hidden" id="stage3-permission">
+        <p class="question">
+          DO YOU WISH TO OPEN YOUR WEBCAM FOR VERIFICATION?
+        </p>
+        <div class="choices">
+          <button class="start" id="yes-camera">&gt; YES</button>
+          <button class="start" id="no-camera">&gt; NO</button>
+        </div>
+      </div>
+
+      <!-- PAGE 3: Camera -->
+      <div class="frame page hidden" id="stage3-camera">
+        <div class="camera-wrapper">
+          <video id="webcam" autoplay playsinline muted></video>
+          <div id="p5-canvas"></div>
+        </div>
+      </div>
+
+      <!-- PAGE 4: Denied -->
+      <div class="frame page hidden" id="stage3-denied">
+        <h2 class="stage-title">ACCESS DENIED</h2>
+        <p class="question">
+          Without webcam access, the process cannot continue.
+        </p>
+        <button class="start" data-target="stage3-permission">
+          [ GO BACK ]
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span id="date"></span>
+        <span id="time"></span>
+        <span id="location">Ho Chi Minh City</span>
+      </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/stage3.js"></script>
+  </body>
+</html>
